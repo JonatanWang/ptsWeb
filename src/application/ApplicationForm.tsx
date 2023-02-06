@@ -22,7 +22,7 @@ const ApplicationForm = ({application, submitted}: Args) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Name"
+              placeholder="Your name, at least 4 letters"
               value={applicationState.name}
               onChange={(e) =>
                 setApplicationState({ ...applicationState, name: e.target.value })
@@ -34,7 +34,7 @@ const ApplicationForm = ({application, submitted}: Args) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Company"
+              placeholder="Your company"
               value={applicationState.company}
               onChange={(e) =>
                 setApplicationState({ ...applicationState, company: e.target.value })
@@ -46,7 +46,7 @@ const ApplicationForm = ({application, submitted}: Args) => {
             <input
               type="email"
               className="form-control"
-              placeholder="Email"
+              placeholder="Your email e.g. john.doe@pts.se"
               value={applicationState.email}
               onChange={(e) =>
                 setApplicationState({ ...applicationState, email: e.target.value })
@@ -58,7 +58,7 @@ const ApplicationForm = ({application, submitted}: Args) => {
             <input
               type="text"
               className="form-control"
-              placeholder="0 - 9, only numbers"
+              placeholder="0 - 9, only numbers, e.g. 0701234567"
               value={applicationState.mobileNumber}
               onChange={(e) =>
                 setApplicationState({ ...applicationState, mobileNumber: e.target.value })
@@ -82,7 +82,7 @@ const ApplicationForm = ({application, submitted}: Args) => {
           </div>
 
           <button
-            className="btn btn-primary mt-2"
+            className="btn btn-success mt-2 col-md-12 text-center"
             disabled={!applicationState.name || !applicationState.email}
             onClick={onSubmit}
           >

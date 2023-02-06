@@ -41,7 +41,12 @@ const ApplicationList = () => {
             ))}
         </tbody>
       </table>
-      <Link className="btn btn-primary" to="/application/add">Apply</Link>
+      <Link
+        className="btn btn-warning col-md-12 text-center"
+        to="/application/add"
+      >
+        Apply
+      </Link>
     </div>
   );
 };
